@@ -51,7 +51,7 @@ describe UserAgent::Browsers::Webkit do
 
     describe "Android" do
       it { "Mozilla/5.0 (Linux; U; Android 1.5; de-; HTC Magic Build/PLAT-RC33) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1".should be_browser("Android").version("3.1.2").webkit_version("528.5+").build("528.5+").platform("Android").os("Android 1.5").language("de").security(:strong).mobile(true) }
-      it { "Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Nexus One Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17 Chrome/4.1.249.1025".should be_browser("Android").version("4.0").webkit_version("530.17").build("530.17").platform("Android").os("Android 2.1-update1").language("en-US").security(:strong).mobile(true) }
+      it { "Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Nexus One Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17 Chrome/4.1.249.1025".should be_browser("Chrome").version("4.0").webkit_version("530.17").build("530.17").platform("Android").os("Android 2.1-update1").language("en-US").security(:strong).mobile(true) }
       it { "Mozilla/5.0 (Linux; U; Android 2.2; ja-jp; SBM003SH Build/S1100) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1".should be_browser("Android").version("4.0").webkit_version("533.1").build("533.1").platform("Android").os("Android 2.2").language("ja-JP").security(:strong).mobile(true) }
       it { "Mozilla/5.0 (Linux; U; Android 1.6; es-mx; SonyEricssonX10a Build/R2BA026) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1".should be_browser("Android").version("3.1.2").webkit_version("528.5+").build("528.5+").platform("Android").os("Android 1.6").language("es-MX").security(:strong).mobile(true) }
       it { "Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Droid Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1".should be_browser("Android").version("4.0").webkit_version("533.1").build("533.1").platform("Android").os("Android 2.2.1").language("en-US").security(:strong).mobile(true) }
@@ -64,6 +64,10 @@ describe UserAgent::Browsers::Webkit do
       it { "HTC Dream Mozilla/5.0 (Linux; U; Android 1.5; en-ca; Build/CUPCAKE) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1".should be_browser("Android").version("3.1.2").webkit_version("528.5+").build("528.5+").platform("Android").os("Android 1.5").language("en-CA").security(:strong).mobile(true) }
       it { "Mozilla/5.0 (Linux; U; Android 1.6; en-us; AOSP on Dream (US) Build/Donut) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1".should be_browser("Android").version("3.1.2").webkit_version("528.5+").build("528.5+").platform("Android").os("Android 1.6").language("en-US").security(:strong).mobile(true) }
       it { "Mozilla/5.0 (Linux; U; Android 1.6; fr-fr; LG-GT540 ; Build/Donut) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1 Java/Jbed/7.0 Profile/MIDP-2.1 Configuration/CLDC-1.1 MMS".should be_browser("Android").version("3.1.2").webkit_version("528.5+").build("528.5+").platform("Android").os("Android 1.6").language("fr-FR").security(:strong).mobile(true) }
+
+      describe "Chrome" do
+        it { "Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19".should be_browser("Chrome").version("18.0.1025.133").webkit_version("535.19").build("535.19").platform("Android").os("Android 4.0.4").security(:strong).mobile(true) }
+      end
     end
 
     describe "BlackBerry" do

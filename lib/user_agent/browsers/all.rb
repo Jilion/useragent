@@ -32,7 +32,7 @@ class UserAgent
       def webkit?
         false
       end
-      
+
       def crawler?
         false
       end
@@ -132,7 +132,7 @@ class UserAgent
 
     private
 
-      def detect_name_and_version_from(regexp_and_names, options={})
+      def detect_name_and_version_from(regexp_and_names, options = {})
         detect_name_and_version_in_comment(regexp_and_names, options) ||
           detect_name_and_version_in_product(regexp_and_names, options)
       end
@@ -147,7 +147,7 @@ class UserAgent
           detect_name_and_version_in_product(regexp_and_names, :version_only => true)
       end
 
-      def detect_name_and_version_in_comment(regexp_and_names, options={ :name_only => false, :version_only => false })
+      def detect_name_and_version_in_comment(regexp_and_names, options = { :name_only => false, :version_only => false })
         ua = nil
         if regexp_and_name = regexp_and_names.detect { |regexp_and_name| ua = detect_user_agent_by_comment(regexp_and_name[0]) }
           if options[:name_only]
@@ -166,7 +166,7 @@ class UserAgent
         end
       end
 
-      def detect_name_and_version_in_product(regexp_and_names, options={ :name_only => false, :version_only => false })
+      def detect_name_and_version_in_product(regexp_and_names, options = { :name_only => false, :version_only => false })
         ua = nil
         if regexp_and_name = regexp_and_names.detect { |regexp_and_name| ua = detect_user_agent_by_product(regexp_and_name[0]) }
           if options[:name_only]

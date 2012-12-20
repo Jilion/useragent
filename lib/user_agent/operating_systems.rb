@@ -18,6 +18,9 @@ class UserAgent
       [%r{Windows\s*(9[58])}i,       "Windows"], # Windows 95 & 98
       [%r{Windows\s*(.*)}i,          "Windows"], # All other Windows
 
+      # Android
+      [%r{Android\s?(.*)}i, "Android"],
+
       # UNIX-based
       [%r{FreeBSD[-/\s]?(.*)}i, "FreeBSD"],
       [%r{OpenBSD[-/\s]?(.*)}i, "OpenBSD"],

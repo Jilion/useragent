@@ -5,11 +5,6 @@ gemspec
 gem 'rake'
 
 group :tools do
+  gem 'ruby_gntp'
   gem 'guard-rspec'
-
-  # Notifications
-  gem 'growl'
-  platforms :ruby do
-    gem 'coolline'
-  end
 end

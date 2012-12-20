@@ -5,9 +5,9 @@ class UserAgent
       WEBKIT_BROWSERS = %w[
         AdobeAIR
         Arora
+        Chrome
         Android
         BlackBerry
-        Chrome
         Dolfin
         Epiphany
         Fluid
@@ -132,10 +132,9 @@ class UserAgent
           "iOS#{" #{$1.gsub(/_/, '.')}" unless !$1 || $1.strip.empty?}"
 
         else
-          name_and_version = detect_name_and_version_from(OperatingSystems::REGEXP_AND_NAMES)
-          # Map OS name that needs to (mainly Windows)
-          if platform == "Android" || !name_and_version
-            # Return the OS name *almost* as is (just make the version prettier: e.g. 10_6_6 => 10.6.6)
+          if name_and_version = detect_name_and_version_from(OperatingSystems::REGEXP_AND_NAMES)
+            name_and_version
+          else
             ua = detect { |ua| !ua.comment.nil? }
             if ua && ua.comment.size == 2 && ua.comment[1].size > 1
               ua.comment[1].gsub(/_/, '.')
@@ -144,9 +143,6 @@ class UserAgent
             else
               nil
             end
-
-          else
-            name_and_version
           end
         end
       end
