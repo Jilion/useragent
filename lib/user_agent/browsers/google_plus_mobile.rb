@@ -13,15 +13,6 @@ class UserAgent
         nil
       end
 
-      def compatibility
-        ua = detect_user_agent_by_comment(/compatible/i)
-        (ua && ua.comment) ? ua.comment[0] : nil
-      end
-
-      def compatible?
-        compatibility == "compatible"
-      end
-
       def mobile?
         true
       end

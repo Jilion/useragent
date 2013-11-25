@@ -21,7 +21,7 @@ class UserAgent
       # Opera must be checked before Firefox due to the odd user agents used in some older versions of Opera
       # Googlebot must be checked before Gecko because 2.1 uses Mozilla as user-agent
       # Googlebot mobile must be checked before Webkit and Googlebot
-      [Other, Opera, InternetExplorer, GooglePlusMobile,GooglebotMobile, Webkit, Googlebot, Gecko]
+      [Other, Opera, InternetExplorer, GooglePlusMobile, GooglebotMobile, Webkit, Googlebot, Gecko]
     end
 
     def self.extend(array)
